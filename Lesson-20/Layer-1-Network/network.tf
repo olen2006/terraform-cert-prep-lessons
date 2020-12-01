@@ -1,14 +1,14 @@
 provider "aws" {
-  region                  = "us-west-2" #"us-east-1"
+  region                  = "us-east-1" #"us-east-1"
   shared_credentials_file = "~/.aws/credentials"
-  profile                 = "default" # "la-sandbox"
+  profile                 = "ls-sandbox" # "la-sandbox"
 }
 
 terraform {
   backend "s3" {
-    bucket = "my-terraform-2310202" #"terraform-state-2310202"
+    bucket = "my-terraform-state-2310202" #"terraform-state-2310202"
     key    = "dev/network/terraform.tfstate"
-    region = "us-west-2"
+    region = "us-east-1"
   }
 }
 

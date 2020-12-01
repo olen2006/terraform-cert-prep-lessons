@@ -1,0 +1,1671 @@
+2020/11/28 21:59:56 [INFO] Terraform version: 0.13.5  
+2020/11/28 21:59:56 [INFO] Go runtime version: go1.14.7
+2020/11/28 21:59:56 [INFO] CLI args: []string{"/usr/bin/terraform", "apply", "--auto-approve"}
+2020/11/28 21:59:56 [DEBUG] Attempting to open CLI config file: /home/cloud_user/.terraformrc
+2020/11/28 21:59:56 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/11/28 21:59:56 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2020/11/28 21:59:56 [DEBUG] ignoring non-existing provider search directory /home/cloud_user/.terraform.d/plugins
+2020/11/28 21:59:56 [DEBUG] ignoring non-existing provider search directory /home/cloud_user/.local/share/terraform/plugins
+2020/11/28 21:59:56 [DEBUG] ignoring non-existing provider search directory /home/cloud_user/.local/share/flatpak/exports/share/terraform/plugins
+2020/11/28 21:59:56 [DEBUG] ignoring non-existing provider search directory /var/lib/flatpak/exports/share/terraform/plugins
+2020/11/28 21:59:56 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2020/11/28 21:59:56 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2020/11/28 21:59:56 [INFO] CLI command args: []string{"apply", "--auto-approve"}
+2020/11/28 21:59:56 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/11/28 21:59:56 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/11/28 21:59:56 [DEBUG] New state was assigned lineage "2bc8f83e-2769-8c0b-8537-e270bf9cf4c7"
+2020/11/28 21:59:56 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/11/28 21:59:56 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/11/28 21:59:56 [TRACE] providercache.fillMetaCache: scanning directory .terraform/plugins
+2020/11/28 21:59:56 [TRACE] getproviders.SearchLocalDirectory: .terraform/plugins is a symlink to .terraform/plugins
+2020/11/28 21:59:56 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v3.18.0 for linux_amd64 at .terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64
+2020/11/28 21:59:56 [TRACE] providercache.fillMetaCache: including .terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64 as a candidate package for registry.terraform.io/hashicorp/aws 3.18.0
+2020/11/28 21:59:56 [DEBUG] checking for provisioner in "."
+2020/11/28 21:59:56 [DEBUG] checking for provisioner in "/usr/bin"
+2020/11/28 21:59:56 [INFO] Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory
+2020/11/28 21:59:56 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/11/28 21:59:56 [INFO] backend/local: starting Apply operation
+2020/11/28 21:59:56 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/11/28 21:59:56 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/11/28 21:59:56 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/11/28 21:59:56 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/11/28 21:59:56 [TRACE] statemgr.Filesystem: existing snapshot has lineage "f2e09052-b7dd-ff3b-8ccb-eb96fe255019" serial 3
+2020/11/28 21:59:56 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/11/28 21:59:56 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/11/28 21:59:56 [TRACE] backend/local: reading remote state for workspace "default"
+2020/11/28 21:59:56 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/11/28 21:59:56 [TRACE] statemgr.Filesystem: read snapshot with lineage "f2e09052-b7dd-ff3b-8ccb-eb96fe255019" serial 3
+2020/11/28 21:59:56 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/11/28 21:59:56 [TRACE] backend/local: building context for current working directory
+2020/11/28 21:59:56 [TRACE] terraform.NewContext: starting
+2020/11/28 21:59:56 [TRACE] terraform.NewContext: loading provider schemas
+2020/11/28 21:59:56 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2020-11-28T21:59:56.970Z [INFO]  plugin: configuring client automatic mTLS
+2020-11-28T21:59:57.011Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5]
+2020-11-28T21:59:57.015Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 pid=7129
+2020-11-28T21:59:57.015Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5
+2020-11-28T21:59:57.064Z [INFO]  plugin.terraform-provider-aws_v3.18.0_x5: configuring server automatic mTLS: timestamp=2020-11-28T21:59:57.063Z
+2020-11-28T21:59:57.108Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: plugin address: address=/tmp/plugin946810452 network=unix timestamp=2020-11-28T21:59:57.108Z
+2020-11-28T21:59:57.108Z [DEBUG] plugin: using plugin: version=5
+2020/11/28 21:59:57 [TRACE] GRPCProvider: GetSchema
+2020-11-28T21:59:57.194Z [TRACE] plugin.stdio: waiting for stdio data
+2020/11/28 21:59:57 [TRACE] GRPCProvider: Close
+2020-11-28T21:59:57.344Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-11-28T21:59:57.348Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 pid=7129
+2020-11-28T21:59:57.348Z [DEBUG] plugin: plugin exited
+2020/11/28 21:59:57 [TRACE] terraform.NewContext: complete
+2020/11/28 21:59:57 [TRACE] backend/local: finished building terraform.Context
+2020/11/28 21:59:57 [TRACE] backend/local: requesting interactive input, if necessary
+2020/11/28 21:59:57 [TRACE] Context.Input: Prompting for provider arguments
+2020/11/28 21:59:57 [TRACE] Context.Input: Provider provider.aws declared at DynamicSecurityGroup.tf:9,1-15
+2020/11/28 21:59:57 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2020/11/28 21:59:57 [TRACE] backend/local: running validation operation
+2020/11/28 21:59:57 [INFO] terraform: building graph: GraphTypeValidate
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/11/28 21:59:57 [TRACE] ConfigTransformer: Starting for path: 
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeValidatableResource
+  aws_security_group.my_webserver - *terraform.NodeValidatableResource
+  ------
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/11/28 21:59:57 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/11/28 21:59:57 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.my_webserver" (*terraform.NodeValidatableResource) config from DynamicSecurityGroup.tf:27,1-45
+2020/11/28 21:59:57 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.my_webserver
+2020/11/28 21:59:57 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.my_webserver" (*terraform.NodeValidatableResource) config from DynamicSecurityGroup.tf:15,1-39
+2020/11/28 21:59:57 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.my_webserver
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/11/28 21:59:57 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from DynamicSecurityGroup.tf:9,1-15
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeValidatableResource
+  aws_security_group.my_webserver - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/11/28 21:59:57 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.my_webserver
+2020/11/28 21:59:57 [DEBUG] ProviderTransformer: "aws_security_group.my_webserver" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:57 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.my_webserver
+2020/11/28 21:59:57 [DEBUG] ProviderTransformer: "aws_instance.my_webserver" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/11/28 21:59:57 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.my_webserver
+2020/11/28 21:59:57 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.my_webserver
+2020/11/28 21:59:57 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/28 21:59:57 [DEBUG] ReferenceTransformer: "aws_security_group.my_webserver" references: []
+2020/11/28 21:59:57 [DEBUG] ReferenceTransformer: "aws_instance.my_webserver" references: [aws_security_group.my_webserver]
+2020/11/28 21:59:57 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeValidatableResource
+    aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeValidatableResource
+    aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver - *terraform.NodeValidatableResource
+    aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeValidatableResource
+    aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver - *terraform.NodeValidatableResource
+    aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver - *terraform.NodeValidatableResource
+    aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeValidatableResource
+    aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver - *terraform.NodeValidatableResource
+    aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver - *terraform.NodeValidatableResource
+    aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeValidatableResource
+    aws_security_group.my_webserver - *terraform.NodeValidatableResource
+  aws_security_group.my_webserver - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/11/28 21:59:57 [DEBUG] Starting graph walk: walkValidate
+2020/11/28 21:59:57 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/28 21:59:57 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/11/28 21:59:57 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": evaluating
+2020/11/28 21:59:57 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalInitProvider
+2020-11-28T21:59:57.351Z [INFO]  plugin: configuring client automatic mTLS
+2020-11-28T21:59:57.392Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5]
+2020-11-28T21:59:57.396Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 pid=7136
+2020-11-28T21:59:57.396Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5
+2020-11-28T21:59:57.451Z [INFO]  plugin.terraform-provider-aws_v3.18.0_x5: configuring server automatic mTLS: timestamp=2020-11-28T21:59:57.450Z
+2020-11-28T21:59:57.494Z [DEBUG] plugin: using plugin: version=5
+2020-11-28T21:59:57.495Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: plugin address: address=/tmp/plugin503111956 network=unix timestamp=2020-11-28T21:59:57.494Z
+2020/11/28 21:59:57 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalValidateProvider
+2020/11/28 21:59:57 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2020/11/28 21:59:57 [TRACE] GRPCProvider: GetSchema
+2020-11-28T21:59:57.578Z [TRACE] plugin.stdio: waiting for stdio data
+2020/11/28 21:59:57 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/11/28 21:59:57 [TRACE] eval: terraform.EvalNoop
+2020/11/28 21:59:57 [TRACE] eval: terraform.EvalNoop
+2020/11/28 21:59:57 [TRACE] eval: terraform.EvalNoop
+2020/11/28 21:59:57 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:57 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2020/11/28 21:59:57 [TRACE] dag/walk: visiting "aws_security_group.my_webserver"
+2020/11/28 21:59:57 [TRACE] vertex "aws_security_group.my_webserver": starting visit (*terraform.NodeValidatableResource)
+2020/11/28 21:59:57 [TRACE] vertex "aws_security_group.my_webserver": evaluating
+2020/11/28 21:59:57 [TRACE] [walkValidate] Entering eval tree: aws_security_group.my_webserver
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalValidateResource
+2020/11/28 21:59:57 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020-11-28T21:59:57.889Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:57 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2020-11-28T21:59:57.889Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:57 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2020/11/28 21:59:57 [TRACE] [walkValidate] Exiting eval tree: aws_security_group.my_webserver
+2020/11/28 21:59:57 [TRACE] vertex "aws_security_group.my_webserver": visit complete
+2020/11/28 21:59:57 [TRACE] dag/walk: visiting "aws_instance.my_webserver"
+2020/11/28 21:59:57 [TRACE] vertex "aws_instance.my_webserver": starting visit (*terraform.NodeValidatableResource)
+2020/11/28 21:59:57 [TRACE] vertex "aws_instance.my_webserver": evaluating
+2020/11/28 21:59:57 [TRACE] [walkValidate] Entering eval tree: aws_instance.my_webserver
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalValidateResource
+2020/11/28 21:59:57 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/11/28 21:59:57 [TRACE] [walkValidate] Exiting eval tree: aws_instance.my_webserver
+2020/11/28 21:59:57 [TRACE] vertex "aws_instance.my_webserver": visit complete
+2020/11/28 21:59:57 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/11/28 21:59:57 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/11/28 21:59:57 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/11/28 21:59:57 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/11/28 21:59:57 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/11/28 21:59:57 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020/11/28 21:59:57 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 21:59:57 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/11/28 21:59:57 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": evaluating
+2020/11/28 21:59:57 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalCloseProvider
+2020/11/28 21:59:57 [TRACE] GRPCProvider: Close
+2020-11-28T21:59:57.893Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-11-28T21:59:57.897Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 pid=7136
+2020-11-28T21:59:57.897Z [DEBUG] plugin: plugin exited
+2020/11/28 21:59:57 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/11/28 21:59:57 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2020/11/28 21:59:57 [TRACE] dag/walk: visiting "root"
+2020/11/28 21:59:57 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/11/28 21:59:57 [TRACE] vertex "root": evaluating
+2020/11/28 21:59:57 [TRACE] [walkValidate] Entering eval tree: root
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:57 [TRACE] eval: terraform.EvalNoop
+2020/11/28 21:59:57 [TRACE] [walkValidate] Exiting eval tree: root
+2020/11/28 21:59:57 [TRACE] vertex "root": visit complete
+2020/11/28 21:59:57 [INFO] backend/local: apply calling Refresh
+2020/11/28 21:59:57 [INFO] terraform: building graph: GraphTypeRefresh
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/11/28 21:59:57 [TRACE] ConfigTransformer: Starting for path: 
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+  ------
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/11/28 21:59:57 [TRACE] ConfigTransformer: Starting for path: 
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/11/28 21:59:57 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/11/28 21:59:57 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.my_webserver (expand)" (*terraform.nodeExpandRefreshableManagedResource) config from DynamicSecurityGroup.tf:15,1-39
+2020/11/28 21:59:57 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.my_webserver (expand)
+2020/11/28 21:59:57 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.my_webserver (expand)" (*terraform.nodeExpandRefreshableManagedResource) config from DynamicSecurityGroup.tf:27,1-45
+2020/11/28 21:59:57 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.my_webserver (expand)
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/11/28 21:59:57 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from DynamicSecurityGroup.tf:9,1-15
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/11/28 21:59:57 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.my_webserver (expand)
+2020/11/28 21:59:57 [DEBUG] ProviderTransformer: "aws_security_group.my_webserver (expand)" (*terraform.nodeExpandRefreshableManagedResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:57 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.my_webserver (expand)
+2020/11/28 21:59:57 [DEBUG] ProviderTransformer: "aws_instance.my_webserver (expand)" (*terraform.nodeExpandRefreshableManagedResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/11/28 21:59:57 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/11/28 21:59:57 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.my_webserver (expand)
+2020/11/28 21:59:57 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.my_webserver (expand)
+2020/11/28 21:59:57 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/28 21:59:57 [DEBUG] ReferenceTransformer: "aws_instance.my_webserver (expand)" references: [aws_security_group.my_webserver (expand)]
+2020/11/28 21:59:57 [DEBUG] ReferenceTransformer: "aws_security_group.my_webserver (expand)" references: []
+2020/11/28 21:59:57 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/11/28 21:59:57 [TRACE] AttachDependenciesTransformer: aws_instance.my_webserver depends on [aws_security_group.my_webserver]
+2020/11/28 21:59:57 [TRACE] AttachDependenciesTransformer: aws_security_group.my_webserver depends on []
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/11/28 21:59:57 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/11/28 21:59:57 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandRefreshableManagedResource
+  root - *terraform.nodeCloseModule
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/11/28 21:59:57 [DEBUG] Starting graph walk: walkRefresh
+2020/11/28 21:59:57 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/28 21:59:57 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/11/28 21:59:57 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": evaluating
+2020/11/28 21:59:57 [TRACE] [walkRefresh] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:57 [TRACE] eval: *terraform.EvalInitProvider
+2020-11-28T21:59:57.899Z [INFO]  plugin: configuring client automatic mTLS
+2020-11-28T21:59:57.937Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5]
+2020-11-28T21:59:57.939Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 pid=7143
+2020-11-28T21:59:57.939Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5
+2020-11-28T21:59:57.987Z [INFO]  plugin.terraform-provider-aws_v3.18.0_x5: configuring server automatic mTLS: timestamp=2020-11-28T21:59:57.987Z
+2020-11-28T21:59:58.031Z [DEBUG] plugin: using plugin: version=5
+2020-11-28T21:59:58.031Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: plugin address: address=/tmp/plugin184325693 network=unix timestamp=2020-11-28T21:59:58.031Z
+2020/11/28 21:59:58 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:58 [TRACE] eval: terraform.EvalNoop
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalConfigProvider
+2020/11/28 21:59:58 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2020/11/28 21:59:58 [TRACE] GRPCProvider: GetSchema
+2020-11-28T21:59:58.114Z [TRACE] plugin.stdio: waiting for stdio data
+2020/11/28 21:59:58 [TRACE] GRPCProvider: Configure
+2020-11-28T21:59:58.268Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:58 [INFO] AWS Auth provider used: "SharedCredentialsProvider"
+2020-11-28T21:59:58.268Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:58 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020-11-28T21:59:58.323Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:58 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020/11/28 21:59:58 [TRACE] eval: terraform.EvalNoop
+2020/11/28 21:59:58 [TRACE] [walkRefresh] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:58 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2020/11/28 21:59:58 [TRACE] dag/walk: visiting "aws_security_group.my_webserver (expand)"
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver (expand)": starting visit (*terraform.nodeExpandRefreshableManagedResource)
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver (expand)": expanding dynamic subgraph
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver (expand)": entering dynamic subgraph
+2020/11/28 21:59:58 [TRACE] dag/walk: visiting "aws_security_group.my_webserver"
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver": starting visit (*terraform.NodeRefreshableManagedResource)
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver": expanding dynamic subgraph
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/11/28 21:59:58 [TRACE] ResourceCountTransformer: adding aws_security_group.my_webserver as *terraform.NodeRefreshableManagedResourceInstance
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  aws_security_group.my_webserver - *terraform.NodeRefreshableManagedResourceInstance
+  ------
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver": entering dynamic subgraph
+2020/11/28 21:59:58 [TRACE] dag/walk: visiting "aws_security_group.my_webserver"
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver": starting visit (*terraform.NodeRefreshableManagedResourceInstance)
+2020/11/28 21:59:58 [TRACE] NodeRefreshableManagedResourceInstance: aws_security_group.my_webserver will be refreshed
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver": evaluating
+2020/11/28 21:59:58 [TRACE] [walkRefresh] Entering eval tree: aws_security_group.my_webserver
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalReadState
+2020/11/28 21:59:58 [TRACE] EvalReadState: reading state for aws_security_group.my_webserver
+2020/11/28 21:59:58 [TRACE] UpgradeResourceState: schema version of aws_security_group.my_webserver is still 1; calling provider "aws" for any other minor fixups
+2020/11/28 21:59:58 [TRACE] GRPCProvider: UpgradeResourceState
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalRefreshDependencies
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalRefreshLifecycle
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalRefresh
+2020/11/28 21:59:58 [TRACE] GRPCProvider: ReadResource
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalWriteState
+2020/11/28 21:59:58 [TRACE] EvalWriteState: recording 0 dependencies for aws_security_group.my_webserver
+2020/11/28 21:59:58 [TRACE] EvalWriteState: writing current state object for aws_security_group.my_webserver
+2020/11/28 21:59:58 [TRACE] [walkRefresh] Exiting eval tree: aws_security_group.my_webserver
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver": visit complete
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver": dynamic subgraph completed successfully
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver": visit complete
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver (expand)": dynamic subgraph completed successfully
+2020/11/28 21:59:58 [TRACE] vertex "aws_security_group.my_webserver (expand)": visit complete
+2020/11/28 21:59:58 [TRACE] dag/walk: visiting "aws_instance.my_webserver (expand)"
+2020/11/28 21:59:58 [TRACE] vertex "aws_instance.my_webserver (expand)": starting visit (*terraform.nodeExpandRefreshableManagedResource)
+2020/11/28 21:59:58 [TRACE] vertex "aws_instance.my_webserver (expand)": expanding dynamic subgraph
+2020/11/28 21:59:58 [TRACE] vertex "aws_instance.my_webserver (expand)": entering dynamic subgraph
+2020/11/28 21:59:58 [TRACE] dag/walk: visiting "aws_instance.my_webserver"
+2020/11/28 21:59:58 [TRACE] vertex "aws_instance.my_webserver": starting visit (*terraform.NodeRefreshableManagedResource)
+2020/11/28 21:59:58 [TRACE] vertex "aws_instance.my_webserver": expanding dynamic subgraph
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/11/28 21:59:58 [TRACE] ResourceCountTransformer: adding aws_instance.my_webserver as *terraform.NodeRefreshableManagedResourceInstance
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeRefreshableManagedResourceInstance
+  ------
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/11/28 21:59:58 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/11/28 21:59:58 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/11/28 21:59:58 [TRACE] vertex "aws_instance.my_webserver": entering dynamic subgraph
+2020/11/28 21:59:58 [TRACE] dag/walk: visiting "aws_instance.my_webserver"
+2020/11/28 21:59:58 [TRACE] vertex "aws_instance.my_webserver": starting visit (*terraform.NodeRefreshableManagedResourceInstance)
+2020/11/28 21:59:58 [TRACE] NodeRefreshableManagedResourceInstance: aws_instance.my_webserver will be refreshed
+2020/11/28 21:59:58 [TRACE] vertex "aws_instance.my_webserver": evaluating
+2020/11/28 21:59:58 [TRACE] [walkRefresh] Entering eval tree: aws_instance.my_webserver
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalReadState
+2020/11/28 21:59:58 [TRACE] EvalReadState: reading state for aws_instance.my_webserver
+2020/11/28 21:59:58 [TRACE] UpgradeResourceState: schema version of aws_instance.my_webserver is still 1; calling provider "aws" for any other minor fixups
+2020/11/28 21:59:58 [TRACE] GRPCProvider: UpgradeResourceState
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalRefreshDependencies
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalRefreshLifecycle
+2020/11/28 21:59:58 [TRACE] eval: *terraform.EvalRefresh
+2020/11/28 21:59:58 [TRACE] GRPCProvider: ReadResource
+2020-11-28T21:59:58.785Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:58 [DEBUG] Setting Security Group IDs: []string{"sg-0961a4a46e9a7381e"}
+2020-11-28T21:59:58.785Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:58 [DEBUG] Setting Security Group Names: []string{"Webserver Security Group"}
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalWriteState
+2020/11/28 21:59:59 [TRACE] EvalWriteState: recording 1 dependencies for aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] EvalWriteState: writing current state object for aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] [walkRefresh] Exiting eval tree: aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": visit complete
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": dynamic subgraph completed successfully
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": visit complete
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver (expand)": dynamic subgraph completed successfully
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver (expand)": visit complete
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 21:59:59 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/11/28 21:59:59 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": evaluating
+2020/11/28 21:59:59 [TRACE] [walkRefresh] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalCloseProvider
+2020/11/28 21:59:59 [TRACE] GRPCProvider: Close
+2020-11-28T21:59:59.195Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-11-28T21:59:59.199Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 pid=7143
+2020-11-28T21:59:59.199Z [DEBUG] plugin: plugin exited
+2020/11/28 21:59:59 [TRACE] [walkRefresh] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/11/28 21:59:59 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "root"
+2020/11/28 21:59:59 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/11/28 21:59:59 [TRACE] vertex "root": evaluating
+2020/11/28 21:59:59 [TRACE] [walkRefresh] Entering eval tree: root
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:59 [TRACE] eval: terraform.EvalNoop
+2020/11/28 21:59:59 [TRACE] [walkRefresh] Exiting eval tree: root
+2020/11/28 21:59:59 [TRACE] vertex "root": visit complete
+2020/11/28 21:59:59 [INFO] backend/local: apply calling Plan
+2020/11/28 21:59:59 [INFO] terraform: building graph: GraphTypePlan
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/11/28 21:59:59 [TRACE] ConfigTransformer: Starting for path: 
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/11/28 21:59:59 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.my_webserver (expand)" (*terraform.nodeExpandPlannableResource) config from DynamicSecurityGroup.tf:27,1-45
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.my_webserver (expand)
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.my_webserver (expand)" (*terraform.nodeExpandPlannableResource) config from DynamicSecurityGroup.tf:15,1-39
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.my_webserver (expand)
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/11/28 21:59:59 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from DynamicSecurityGroup.tf:9,1-15
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/11/28 21:59:59 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.my_webserver (expand)
+2020/11/28 21:59:59 [DEBUG] ProviderTransformer: "aws_instance.my_webserver (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.my_webserver (expand)
+2020/11/28 21:59:59 [DEBUG] ProviderTransformer: "aws_security_group.my_webserver (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/11/28 21:59:59 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.my_webserver (expand)
+2020/11/28 21:59:59 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.my_webserver (expand)
+2020/11/28 21:59:59 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/28 21:59:59 [DEBUG] ReferenceTransformer: "aws_instance.my_webserver (expand)" references: [aws_security_group.my_webserver (expand)]
+2020/11/28 21:59:59 [DEBUG] ReferenceTransformer: "aws_security_group.my_webserver (expand)" references: []
+2020/11/28 21:59:59 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/11/28 21:59:59 [TRACE] ForcedCBDTransformer: "aws_instance.my_webserver (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/11/28 21:59:59 [TRACE] ForcedCBDTransformer: "aws_security_group.my_webserver (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/11/28 21:59:59 [DEBUG] Starting graph walk: walkPlan
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/28 21:59:59 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/11/28 21:59:59 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": evaluating
+2020/11/28 21:59:59 [TRACE] [walkPlan] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalInitProvider
+2020-11-28T21:59:59.201Z [INFO]  plugin: configuring client automatic mTLS
+2020-11-28T21:59:59.241Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5]
+2020-11-28T21:59:59.241Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 pid=7150
+2020-11-28T21:59:59.241Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5
+2020-11-28T21:59:59.292Z [INFO]  plugin.terraform-provider-aws_v3.18.0_x5: configuring server automatic mTLS: timestamp=2020-11-28T21:59:59.292Z
+2020-11-28T21:59:59.335Z [DEBUG] plugin: using plugin: version=5
+2020-11-28T21:59:59.335Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: plugin address: network=unix address=/tmp/plugin234773654 timestamp=2020-11-28T21:59:59.334Z
+2020/11/28 21:59:59 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] eval: terraform.EvalNoop
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalConfigProvider
+2020/11/28 21:59:59 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2020/11/28 21:59:59 [TRACE] GRPCProvider: GetSchema
+2020-11-28T21:59:59.420Z [TRACE] plugin.stdio: waiting for stdio data
+2020/11/28 21:59:59 [TRACE] GRPCProvider: Configure
+2020-11-28T21:59:59.567Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:59 [INFO] AWS Auth provider used: "SharedCredentialsProvider"
+2020-11-28T21:59:59.567Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:59 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020-11-28T21:59:59.623Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:59 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020/11/28 21:59:59 [TRACE] eval: terraform.EvalNoop
+2020/11/28 21:59:59 [TRACE] [walkPlan] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "aws_security_group.my_webserver (expand)"
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver (expand)": expanding dynamic subgraph
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver (expand)": entering dynamic subgraph
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "aws_security_group.my_webserver"
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver": starting visit (*terraform.NodePlannableResource)
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver": evaluating
+2020/11/28 21:59:59 [TRACE] [walkPlan] Entering eval tree: aws_security_group.my_webserver
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalWriteResourceState
+2020/11/28 21:59:59 [TRACE] [walkPlan] Exiting eval tree: aws_security_group.my_webserver
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver": expanding dynamic subgraph
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/11/28 21:59:59 [TRACE] ResourceCountTransformer: adding aws_security_group.my_webserver as *terraform.NodePlannableResourceInstance
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  aws_security_group.my_webserver - *terraform.NodePlannableResourceInstance
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/28 21:59:59 [DEBUG] ReferenceTransformer: "aws_security_group.my_webserver" references: []
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver": entering dynamic subgraph
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "aws_security_group.my_webserver"
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver": starting visit (*terraform.NodePlannableResourceInstance)
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver": evaluating
+2020/11/28 21:59:59 [TRACE] [walkPlan] Entering eval tree: aws_security_group.my_webserver
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalReadState
+2020/11/28 21:59:59 [TRACE] EvalReadState: reading state for aws_security_group.my_webserver
+2020/11/28 21:59:59 [TRACE] UpgradeResourceState: schema version of aws_security_group.my_webserver is still 1; calling provider "aws" for any other minor fixups
+2020/11/28 21:59:59 [TRACE] GRPCProvider: UpgradeResourceState
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalValidateSelfRef
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalDiff
+2020/11/28 21:59:59 [TRACE] Re-validating config for "aws_security_group.my_webserver"
+2020/11/28 21:59:59 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020-11-28T21:59:59.716Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:59 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2020-11-28T21:59:59.716Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 21:59:59 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2020/11/28 21:59:59 [TRACE] GRPCProvider: PlanResourceChange
+2020/11/28 21:59:59 [WARN] Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_security_group.my_webserver, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .egress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("-1"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(0)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("-1"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(0)})}) nor prior value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(0), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("-1"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(0)})})
+      - .ingress: planned value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(443), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(443)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(8080), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(8080)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal(""), "from_port":cty.NumberIntVal(80), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(80)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("66.222.167.242/32")}), "description":cty.StringVal("My Public IPV4"), "from_port":cty.NumberIntVal(22), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(22)})}) does not match config value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(443), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(443)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(8080), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(8080)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.NullVal(cty.String), "from_port":cty.NumberIntVal(80), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(80)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("66.222.167.242/32")}), "description":cty.StringVal("My Public IPV4"), "from_port":cty.NumberIntVal(22), "ipv6_cidr_blocks":cty.NullVal(cty.List(cty.String)), "prefix_list_ids":cty.NullVal(cty.List(cty.String)), "protocol":cty.StringVal("tcp"), "security_groups":cty.NullVal(cty.Set(cty.String)), "self":cty.NullVal(cty.Bool), "to_port":cty.NumberIntVal(22)})}) nor prior value cty.SetVal([]cty.Value{cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal("HTTP Traffic"), "from_port":cty.NumberIntVal(80), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(80)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal("HTTPS Traffic"), "from_port":cty.NumberIntVal(443), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(443)}), cty.ObjectVal(map[string]cty.Value{"cidr_blocks":cty.ListVal([]cty.Value{cty.StringVal("0.0.0.0/0")}), "description":cty.StringVal("SSH"), "from_port":cty.NumberIntVal(22), "ipv6_cidr_blocks":cty.ListValEmpty(cty.String), "prefix_list_ids":cty.ListValEmpty(cty.String), "protocol":cty.StringVal("tcp"), "security_groups":cty.SetValEmpty(cty.String), "self":cty.False, "to_port":cty.NumberIntVal(22)})})
+2020/11/28 21:59:59 [TRACE] GRPCProvider: PlanResourceChange
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalCheckPreventDestroy
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalWriteState
+2020/11/28 21:59:59 [TRACE] EvalWriteState: writing current state object for aws_security_group.my_webserver
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalWriteDiff
+2020/11/28 21:59:59 [TRACE] EvalWriteDiff: recorded DeleteThenCreate change for aws_security_group.my_webserver
+2020/11/28 21:59:59 [TRACE] [walkPlan] Exiting eval tree: aws_security_group.my_webserver
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver": visit complete
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver": dynamic subgraph completed successfully
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver": visit complete
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver (expand)": dynamic subgraph completed successfully
+2020/11/28 21:59:59 [TRACE] vertex "aws_security_group.my_webserver (expand)": visit complete
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "aws_instance.my_webserver (expand)"
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver (expand)": expanding dynamic subgraph
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver (expand)": entering dynamic subgraph
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "aws_instance.my_webserver"
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": starting visit (*terraform.NodePlannableResource)
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": evaluating
+2020/11/28 21:59:59 [TRACE] [walkPlan] Entering eval tree: aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalWriteResourceState
+2020/11/28 21:59:59 [TRACE] [walkPlan] Exiting eval tree: aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": expanding dynamic subgraph
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/11/28 21:59:59 [TRACE] ResourceCountTransformer: adding aws_instance.my_webserver as *terraform.NodePlannableResourceInstance
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodePlannableResourceInstance
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/28 21:59:59 [DEBUG] ReferenceTransformer: "aws_instance.my_webserver" references: []
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": entering dynamic subgraph
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "aws_instance.my_webserver"
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": starting visit (*terraform.NodePlannableResourceInstance)
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": evaluating
+2020/11/28 21:59:59 [TRACE] [walkPlan] Entering eval tree: aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalReadState
+2020/11/28 21:59:59 [TRACE] EvalReadState: reading state for aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] UpgradeResourceState: schema version of aws_instance.my_webserver is still 1; calling provider "aws" for any other minor fixups
+2020/11/28 21:59:59 [TRACE] GRPCProvider: UpgradeResourceState
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalValidateSelfRef
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalDiff
+2020/11/28 21:59:59 [TRACE] Re-validating config for "aws_instance.my_webserver"
+2020/11/28 21:59:59 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/11/28 21:59:59 [TRACE] GRPCProvider: PlanResourceChange
+2020/11/28 21:59:59 [WARN] Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_instance.my_webserver, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .vpc_security_group_ids: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)}) nor prior value cty.SetVal([]cty.Value{cty.StringVal("sg-0961a4a46e9a7381e")})
+      - .metadata_options: block count in plan (1) disagrees with count in config (0)
+      - .root_block_device: block count in plan (1) disagrees with count in config (0)
+      - .credit_specification: block count in plan (1) disagrees with count in config (0)
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalCheckPreventDestroy
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalWriteState
+2020/11/28 21:59:59 [TRACE] EvalWriteState: writing current state object for aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalWriteDiff
+2020/11/28 21:59:59 [TRACE] EvalWriteDiff: recorded Update change for aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] [walkPlan] Exiting eval tree: aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": visit complete
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": dynamic subgraph completed successfully
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver": visit complete
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver (expand)": dynamic subgraph completed successfully
+2020/11/28 21:59:59 [TRACE] vertex "aws_instance.my_webserver (expand)": visit complete
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/11/28 21:59:59 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/11/28 21:59:59 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/11/28 21:59:59 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/11/28 21:59:59 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/11/28 21:59:59 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 21:59:59 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/11/28 21:59:59 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": evaluating
+2020/11/28 21:59:59 [TRACE] [walkPlan] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalCloseProvider
+2020/11/28 21:59:59 [TRACE] GRPCProvider: Close
+2020-11-28T21:59:59.755Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-11-28T21:59:59.759Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 pid=7150
+2020-11-28T21:59:59.759Z [DEBUG] plugin: plugin exited
+2020/11/28 21:59:59 [TRACE] [walkPlan] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/11/28 21:59:59 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "root"
+2020/11/28 21:59:59 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/11/28 21:59:59 [TRACE] vertex "root": evaluating
+2020/11/28 21:59:59 [TRACE] [walkPlan] Entering eval tree: root
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:59 [TRACE] eval: terraform.EvalNoop
+2020/11/28 21:59:59 [TRACE] [walkPlan] Exiting eval tree: root
+2020/11/28 21:59:59 [TRACE] vertex "root": visit complete
+2020/11/28 21:59:59 [INFO] backend/local: apply calling Apply
+2020/11/28 21:59:59 [INFO] terraform: building graph: GraphTypeApply
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/11/28 21:59:59 [TRACE] ConfigTransformer: Starting for path: 
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.DiffTransformer
+2020/11/28 21:59:59 [TRACE] DiffTransformer starting
+2020/11/28 21:59:59 [TRACE] DiffTransformer: found DeleteThenCreate change for aws_security_group.my_webserver 
+2020/11/28 21:59:59 [TRACE] DiffTransformer: aws_security_group.my_webserver will be represented by aws_security_group.my_webserver
+2020/11/28 21:59:59 [TRACE] DiffTransformer: aws_security_group.my_webserver will be represented for destruction by aws_security_group.my_webserver (destroy)
+2020/11/28 21:59:59 [TRACE] DiffTransformer: found Update change for aws_instance.my_webserver 
+2020/11/28 21:59:59 [TRACE] DiffTransformer: aws_instance.my_webserver will be represented by aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] DiffTransformer complete
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+  aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+  aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.my_webserver (expand)" (*terraform.nodeExpandApplyableResource) config from DynamicSecurityGroup.tf:15,1-39
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.my_webserver (expand)
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.my_webserver (expand)" (*terraform.nodeExpandApplyableResource) config from DynamicSecurityGroup.tf:27,1-45
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.my_webserver (expand)
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.my_webserver" (*terraform.NodeApplyableResourceInstance) config from DynamicSecurityGroup.tf:27,1-45
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.my_webserver
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching to "aws_security_group.my_webserver (destroy)" (*terraform.NodeDestroyResourceInstance) config from DynamicSecurityGroup.tf:27,1-45
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_security_group.my_webserver (destroy)
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching to "aws_instance.my_webserver" (*terraform.NodeApplyableResourceInstance) config from DynamicSecurityGroup.tf:15,1-39
+2020/11/28 21:59:59 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/11/28 21:59:59 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/aws\"]" provider configuration from DynamicSecurityGroup.tf:9,1-15
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+  aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+  aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/11/28 21:59:59 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.my_webserver (destroy)
+2020/11/28 21:59:59 [DEBUG] ProviderTransformer: "aws_security_group.my_webserver (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.my_webserver
+2020/11/28 21:59:59 [DEBUG] ProviderTransformer: "aws_instance.my_webserver" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_instance.my_webserver (expand)
+2020/11/28 21:59:59 [DEBUG] ProviderTransformer: "aws_instance.my_webserver (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.my_webserver (expand)
+2020/11/28 21:59:59 [DEBUG] ProviderTransformer: "aws_security_group.my_webserver (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_security_group.my_webserver
+2020/11/28 21:59:59 [DEBUG] ProviderTransformer: "aws_security_group.my_webserver" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/11/28 21:59:59 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/11/28 21:59:59 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.my_webserver (expand)
+2020/11/28 21:59:59 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.my_webserver (expand)
+2020/11/28 21:59:59 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.my_webserver
+2020/11/28 21:59:59 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_security_group.my_webserver (destroy)
+2020/11/28 21:59:59 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_instance.my_webserver
+2020/11/28 21:59:59 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/11/28 21:59:59 [DEBUG] ReferenceTransformer: "aws_instance.my_webserver (expand)" references: []
+2020/11/28 21:59:59 [DEBUG] ReferenceTransformer: "aws_security_group.my_webserver (expand)" references: []
+2020/11/28 21:59:59 [DEBUG] ReferenceTransformer: "aws_security_group.my_webserver" references: []
+2020/11/28 21:59:59 [DEBUG] ReferenceTransformer: "aws_instance.my_webserver" references: [aws_security_group.my_webserver (expand) aws_security_group.my_webserver aws_security_group.my_webserver aws_security_group.my_webserver (destroy) aws_security_group.my_webserver (destroy)]
+2020/11/28 21:59:59 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/11/28 21:59:59 [TRACE] AttachDependenciesTransformer: aws_security_group.my_webserver depends on []
+2020/11/28 21:59:59 [TRACE] AttachDependenciesTransformer: aws_instance.my_webserver depends on [aws_security_group.my_webserver]
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/11/28 21:59:59 [TRACE] ForcedCBDTransformer: "aws_instance.my_webserver" (*terraform.NodeApplyableResourceInstance) has no CBD descendent, so skipping
+2020/11/28 21:59:59 [TRACE] ForcedCBDTransformer: "aws_security_group.my_webserver" (*terraform.NodeApplyableResourceInstance) has no CBD descendent, so skipping
+2020/11/28 21:59:59 [TRACE] ForcedCBDTransformer: "aws_security_group.my_webserver (destroy)" (*terraform.NodeDestroyResourceInstance) has no CBD descendent, so skipping
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2020/11/28 21:59:59 [TRACE] DestroyEdgeTransformer: "aws_security_group.my_webserver (destroy)" (*terraform.NodeDestroyResourceInstance) destroys aws_security_group.my_webserver
+2020/11/28 21:59:59 [TRACE] DestroyEdgeTransformer: aws_instance.my_webserver has stored dependency of aws_security_group.my_webserver (destroy)
+2020/11/28 21:59:59 [TRACE] DestroyEdgeTransformer: connecting creator "aws_security_group.my_webserver" with destroyer "aws_security_group.my_webserver (destroy)"
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.destroyRootOutputTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.destroyRootOutputTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.applyDestroyNodeReferenceFixupTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.applyDestroyNodeReferenceFixupTransformer (no changes)
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/11/28 21:59:59 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/11/28 21:59:59 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+  aws_instance.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver - *terraform.NodeApplyableResourceInstance
+    aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+  aws_security_group.my_webserver (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_security_group.my_webserver (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_instance.my_webserver - *terraform.NodeApplyableResourceInstance
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/11/28 21:59:59 [DEBUG] Starting graph walk: walkApply
+2020/11/28 21:59:59 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/11/28 21:59:59 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/11/28 21:59:59 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": evaluating
+2020/11/28 21:59:59 [TRACE] [walkApply] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalInitProvider
+2020-11-28T21:59:59.763Z [INFO]  plugin: configuring client automatic mTLS
+2020-11-28T21:59:59.802Z [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5]
+2020-11-28T21:59:59.802Z [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 pid=7157
+2020-11-28T21:59:59.802Z [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5
+2020-11-28T21:59:59.857Z [INFO]  plugin.terraform-provider-aws_v3.18.0_x5: configuring server automatic mTLS: timestamp=2020-11-28T21:59:59.856Z
+2020-11-28T21:59:59.901Z [DEBUG] plugin: using plugin: version=5
+2020-11-28T21:59:59.901Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: plugin address: address=/tmp/plugin739091852 network=unix timestamp=2020-11-28T21:59:59.901Z
+2020/11/28 21:59:59 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 21:59:59 [TRACE] eval: terraform.EvalNoop
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 21:59:59 [TRACE] eval: *terraform.EvalConfigProvider
+2020/11/28 21:59:59 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: using explicit config only
+2020/11/28 21:59:59 [TRACE] GRPCProvider: GetSchema
+2020-11-28T21:59:59.987Z [TRACE] plugin.stdio: waiting for stdio data
+2020/11/28 22:00:00 [TRACE] GRPCProvider: Configure
+2020-11-28T22:00:00.146Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:00 [INFO] AWS Auth provider used: "SharedCredentialsProvider"
+2020-11-28T22:00:00.146Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:00 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020-11-28T22:00:00.202Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:00 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020/11/28 22:00:00 [TRACE] eval: terraform.EvalNoop
+2020/11/28 22:00:00 [TRACE] [walkApply] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/11/28 22:00:00 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2020/11/28 22:00:00 [TRACE] dag/walk: visiting "aws_security_group.my_webserver (expand)"
+2020/11/28 22:00:00 [TRACE] dag/walk: visiting "aws_instance.my_webserver (expand)"
+2020/11/28 22:00:00 [TRACE] vertex "aws_security_group.my_webserver (expand)": starting visit (*terraform.nodeExpandApplyableResource)
+2020/11/28 22:00:00 [TRACE] vertex "aws_instance.my_webserver (expand)": starting visit (*terraform.nodeExpandApplyableResource)
+2020/11/28 22:00:00 [TRACE] vertex "aws_security_group.my_webserver (expand)": expanding dynamic subgraph
+2020/11/28 22:00:00 [TRACE] vertex "aws_instance.my_webserver (expand)": expanding dynamic subgraph
+2020/11/28 22:00:00 [TRACE] vertex "aws_security_group.my_webserver (expand)": entering dynamic subgraph
+2020/11/28 22:00:00 [TRACE] vertex "aws_instance.my_webserver (expand)": entering dynamic subgraph
+2020/11/28 22:00:00 [TRACE] dag/walk: visiting "aws_security_group.my_webserver"
+2020/11/28 22:00:00 [TRACE] dag/walk: visiting "aws_instance.my_webserver"
+2020/11/28 22:00:00 [TRACE] vertex "aws_security_group.my_webserver": starting visit (*terraform.NodeApplyableResource)
+2020/11/28 22:00:00 [TRACE] vertex "aws_instance.my_webserver": starting visit (*terraform.NodeApplyableResource)
+2020/11/28 22:00:00 [TRACE] vertex "aws_security_group.my_webserver": evaluating
+2020/11/28 22:00:00 [TRACE] vertex "aws_instance.my_webserver": evaluating
+2020/11/28 22:00:00 [TRACE] [walkApply] Entering eval tree: aws_security_group.my_webserver
+2020/11/28 22:00:00 [TRACE] [walkApply] Entering eval tree: aws_instance.my_webserver
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalWriteResourceState
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalWriteResourceState
+2020/11/28 22:00:00 [TRACE] [walkApply] Exiting eval tree: aws_security_group.my_webserver
+2020/11/28 22:00:00 [TRACE] dag/walk: visiting "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:00:00 [TRACE] vertex "aws_security_group.my_webserver (destroy)": starting visit (*terraform.NodeDestroyResourceInstance)
+2020/11/28 22:00:00 [TRACE] [walkApply] Exiting eval tree: aws_instance.my_webserver
+2020/11/28 22:00:00 [TRACE] vertex "aws_instance.my_webserver": visit complete
+2020/11/28 22:00:00 [TRACE] vertex "aws_security_group.my_webserver": visit complete
+2020/11/28 22:00:00 [TRACE] vertex "aws_instance.my_webserver (expand)": dynamic subgraph completed successfully
+2020/11/28 22:00:00 [TRACE] vertex "aws_security_group.my_webserver (expand)": dynamic subgraph completed successfully
+2020/11/28 22:00:00 [TRACE] vertex "aws_instance.my_webserver (expand)": visit complete
+2020/11/28 22:00:00 [TRACE] vertex "aws_security_group.my_webserver (expand)": visit complete
+2020/11/28 22:00:00 [TRACE] vertex "aws_security_group.my_webserver (destroy)": evaluating
+2020/11/28 22:00:00 [TRACE] [walkApply] Entering eval tree: aws_security_group.my_webserver (destroy)
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalOpFilter
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalReadDiff
+2020/11/28 22:00:00 [TRACE] EvalReadDiff: Read DeleteThenCreate change from plan for aws_security_group.my_webserver
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalReduceDiff
+2020/11/28 22:00:00 [TRACE] EvalReduceDiff: aws_security_group.my_webserver change simplified from DeleteThenCreate to Delete for destroy node
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalIf
+2020/11/28 22:00:00 [TRACE] eval: terraform.EvalNoop
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalReadState
+2020/11/28 22:00:00 [TRACE] EvalReadState: reading state for aws_security_group.my_webserver
+2020/11/28 22:00:00 [TRACE] UpgradeResourceState: schema version of aws_security_group.my_webserver is still 1; calling provider "aws" for any other minor fixups
+2020/11/28 22:00:00 [TRACE] GRPCProvider: UpgradeResourceState
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalRequireState
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalApplyPre
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalIf
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalApplyProvisioners
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalIf
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalIf
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 22:00:00 [TRACE] eval: *terraform.EvalApply
+2020/11/28 22:00:00 [DEBUG] EvalApply: ProviderMeta config value set
+2020/11/28 22:00:00 [DEBUG] aws_security_group.my_webserver: applying the planned Delete change
+2020/11/28 22:00:00 [TRACE] GRPCProvider: ApplyResourceChange
+2020-11-28T22:00:00.292Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:00 [DEBUG] Security Group destroy: sg-0961a4a46e9a7381e
+2020-11-28T22:00:00.414Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:00 [DEBUG] Waiting for state to become: [success]
+2020-11-28T22:00:00.645Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:00 [TRACE] Waiting 500ms before next try
+2020-11-28T22:00:01.548Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:01 [TRACE] Waiting 1s before next try
+2020-11-28T22:00:03.038Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:03 [TRACE] Waiting 2s before next try
+2020/11/28 22:00:04 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:00:04 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:04 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:04 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:00:04 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:00:05.209Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:05 [TRACE] Waiting 4s before next try
+2020-11-28T22:00:09.370Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:09 [TRACE] Waiting 8s before next try
+2020/11/28 22:00:09 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:00:09 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:09 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:00:09 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:09 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:14 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:14 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:14 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:14 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:00:14 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020-11-28T22:00:17.525Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:17 [TRACE] Waiting 10s before next try
+2020/11/28 22:00:19 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:00:19 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:00:19 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:19 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:19 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:24 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:24 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:24 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:00:24 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:24 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020-11-28T22:00:27.782Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:27 [TRACE] Waiting 10s before next try
+2020/11/28 22:00:29 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:29 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:00:29 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:00:29 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:29 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:34 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:34 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:34 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:00:34 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:00:34 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:00:38.231Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:38 [TRACE] Waiting 10s before next try
+2020/11/28 22:00:39 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:39 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:00:39 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:39 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:39 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:00:44 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:44 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:00:44 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:44 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:44 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020-11-28T22:00:48.458Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:48 [TRACE] Waiting 10s before next try
+2020/11/28 22:00:49 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:49 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:00:49 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:49 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:49 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:00:54 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:00:54 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:54 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:54 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:00:54 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:00:59.338Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:00:59 [TRACE] Waiting 10s before next try
+2020/11/28 22:00:59 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:00:59 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:00:59 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:59 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:00:59 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:04 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:04 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:01:04 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:01:04 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:04 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:01:09.519Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:01:09 [TRACE] Waiting 10s before next try
+2020/11/28 22:01:09 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:09 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:09 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:01:09 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:09 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:01:14 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:14 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:01:14 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:14 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:14 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020-11-28T22:01:19.676Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:01:19 [TRACE] Waiting 10s before next try
+2020/11/28 22:01:19 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:19 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:01:19 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:01:19 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:19 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:24 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:24 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:24 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:24 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:01:24 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:01:29 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:01:29 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:01:29 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:29 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:29 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:01:29.926Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:01:29 [TRACE] Waiting 10s before next try
+2020/11/28 22:01:34 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:34 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:34 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:01:34 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:01:34 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:39 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:39 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:39 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:01:39 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:39 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020-11-28T22:01:40.166Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:01:40 [TRACE] Waiting 10s before next try
+2020/11/28 22:01:44 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:44 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:01:44 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:44 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:01:44 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:49 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:01:49 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:49 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:49 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:49 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020-11-28T22:01:50.537Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:01:50 [TRACE] Waiting 10s before next try
+2020/11/28 22:01:54 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:01:54 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:54 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:54 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:01:54 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:59 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:01:59 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:01:59 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:01:59 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:01:59 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:02:00.798Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:02:00 [TRACE] Waiting 10s before next try
+2020/11/28 22:02:04 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:04 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:02:04 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:02:04 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:04 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:09 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:09 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:09 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:09 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:02:09 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020-11-28T22:02:11.198Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:02:11 [TRACE] Waiting 10s before next try
+2020/11/28 22:02:14 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:02:14 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:02:14 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:14 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:14 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:19 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:19 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:19 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:02:19 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:02:19 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:02:21.454Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:02:21 [TRACE] Waiting 10s before next try
+2020/11/28 22:02:24 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:02:24 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:24 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:24 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:24 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:02:29 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:02:29 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:29 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:29 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:29 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020-11-28T22:02:31.744Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:02:31 [TRACE] Waiting 10s before next try
+2020/11/28 22:02:34 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:34 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:34 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:02:34 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:02:34 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:39 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:39 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:02:39 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:39 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:39 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020-11-28T22:02:41.977Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:02:41 [TRACE] Waiting 10s before next try
+2020/11/28 22:02:44 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:44 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:44 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:02:44 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:44 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:02:49 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:02:49 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:49 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:49 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:49 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020-11-28T22:02:52.127Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:02:52 [TRACE] Waiting 10s before next try
+2020/11/28 22:02:54 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:54 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:02:54 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:02:54 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:54 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:59 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:02:59 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:02:59 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:02:59 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:02:59 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:03:02.397Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:03:02 [TRACE] Waiting 10s before next try
+2020/11/28 22:03:04 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:03:04 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:04 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:04 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:04 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:09 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:09 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:09 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:09 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:03:09 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:03:12.559Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:03:12 [TRACE] Waiting 10s before next try
+2020/11/28 22:03:14 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:03:14 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:14 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:14 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:14 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:19 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:19 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:19 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:19 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:03:19 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:03:22.818Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:03:22 [TRACE] Waiting 10s before next try
+2020/11/28 22:03:24 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:24 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:03:24 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:24 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:24 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:29 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:29 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:29 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:03:29 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:29 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:03:33.081Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:03:33 [TRACE] Waiting 10s before next try
+2020/11/28 22:03:34 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:03:34 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:34 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:34 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:34 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:39 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:39 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:39 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:03:39 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:39 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:03:43.309Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:03:43 [TRACE] Waiting 10s before next try
+2020/11/28 22:03:44 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:44 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:44 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:03:44 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:44 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:49 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:49 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:49 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:49 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:49 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020-11-28T22:03:53.545Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:03:53 [TRACE] Waiting 10s before next try
+2020/11/28 22:03:54 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:54 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:03:54 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:54 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:54 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:59 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:03:59 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:03:59 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:03:59 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:03:59 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020-11-28T22:04:03.857Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 2020/11/28 22:04:03 [TRACE] Waiting 10s before next try
+2020/11/28 22:04:04 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:04:04 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:04:04 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:04:04 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:04:04 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:04:09 [TRACE] dag/walk: vertex "aws_instance.my_webserver" is waiting for "aws_security_group.my_webserver"
+2020/11/28 22:04:09 [TRACE] dag/walk: vertex "root" is waiting for "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/11/28 22:04:09 [TRACE] dag/walk: vertex "aws_security_group.my_webserver" is waiting for "aws_security_group.my_webserver (destroy)"
+2020/11/28 22:04:09 [TRACE] dag/walk: vertex "meta.count-boundary (EachMode fixup)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:04:09 [TRACE] dag/walk: vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" is waiting for "aws_instance.my_webserver"
+2020/11/28 22:04:10 [TRACE] backend/local: waiting for the running operation to stop
+2020/11/28 22:04:10 [WARN] terraform: Stop called, initiating interrupt sequence
+2020/11/28 22:04:10 [WARN] terraform: run context exists, stopping
+2020/11/28 22:04:10 [INFO] terraform: waiting for graceful stop to complete
+2020/11/28 22:04:10 [TRACE] Context: requesting providers and provisioners to gracefully stop
+2020/11/28 22:04:10 [TRACE] GRPCProvider: Stop
+2020-11-28T22:04:10.038Z [TRACE] plugin.terraform-provider-aws_v3.18.0_x5: plugin received interrupt signal, ignoring: count=1 timestamp=2020-11-28T22:04:10.038Z
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: panic: close of nil channel
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: goroutine 327 [running]:
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).stop(0xc000397c00)
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:201 +0x71
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/server.(*server).Stop(0xc000397c00, 0x6e016e0, 0xc0012842a0, 0xc0012842d0, 0xc000397c00, 0xc0012842a0, 0xc000b1fba0)
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/server/server.go:215 +0xa1
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: github.com/hashicorp/terraform-plugin-go/tfprotov5/internal/tfplugin5._Provider_Stop_Handler(0x6049f60, 0xc000397c00, 0x6e016e0, 0xc0012842a0, 0xc001e1a120, 0x0, 0x6e016e0, 0xc0012842a0, 0x0, 0x0)
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.1.0/tfprotov5/internal/tfplugin5/tfplugin5_grpc.pb.go:434 +0x217
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: google.golang.org/grpc.(*Server).processUnaryRPC(0xc0001ff500, 0x6e25ea0, 0xc000b14480, 0xc0015bc300, 0xc000e2e990, 0xa5b8de8, 0x0, 0x0, 0x0)
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1194 +0x50a
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: google.golang.org/grpc.(*Server).handleStream(0xc0001ff500, 0x6e25ea0, 0xc000b14480, 0xc0015bc300, 0x0)
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:1517 +0xcfd
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: google.golang.org/grpc.(*Server).serveStreams.func1.2(0xc000d78160, 0xc0001ff500, 0x6e25ea0, 0xc000b14480, 0xc0015bc300)
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:859 +0xa1
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2020-11-28T22:04:10.042Z [DEBUG] plugin.terraform-provider-aws_v3.18.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.32.0/server.go:857 +0x204
+2020-11-28T22:04:10.046Z [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.18.0/linux_amd64/terraform-provider-aws_v3.18.0_x5 pid=7157 error="exit status 2"
+2020-11-28T22:04:10.046Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020/11/28 22:04:10 [DEBUG] aws_security_group.my_webserver: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2020/11/28 22:04:10 [TRACE] eval: *terraform.EvalWriteState
+2020/11/28 22:04:10 [TRACE] EvalWriteState: writing current state object for aws_security_group.my_webserver
+2020/11/28 22:04:10 [TRACE] eval: *terraform.EvalApplyPost
+2020/11/28 22:04:10 [WARN] Early exit triggered by hook: *terraform.stopHook
+2020/11/28 22:04:10 [TRACE] eval: *terraform.EvalApplyPost, early exit err: early exit
+2020/11/28 22:04:10 [TRACE] eval: *terraform.EvalSequence, early exit err: early exit
+2020/11/28 22:04:10 [TRACE] eval: *terraform.EvalOpFilter, early exit err: early exit
+2020/11/28 22:04:10 [TRACE] [walkApply] Exiting eval tree: aws_security_group.my_webserver (destroy)
+2020/11/28 22:04:10 [TRACE] vertex "aws_security_group.my_webserver (destroy)": visit complete
+2020/11/28 22:04:10 [TRACE] dag/walk: visiting "aws_security_group.my_webserver"
+2020/11/28 22:04:10 [TRACE] vertex "aws_security_group.my_webserver": starting visit (*terraform.NodeApplyableResourceInstance)
+2020/11/28 22:04:10 [TRACE] vertex "aws_security_group.my_webserver": evaluating
+2020/11/28 22:04:10 [TRACE] [walkApply] Entering eval tree: aws_security_group.my_webserver
+2020/11/28 22:04:10 [TRACE] eval: *terraform.EvalSequence
+2020/11/28 22:04:10 [TRACE] eval: *terraform.EvalGetProvider
+2020/11/28 22:04:10 [TRACE] eval: *terraform.EvalReadDiff
+2020/11/28 22:04:10 [TRACE] EvalReadDiff: Read DeleteThenCreate change from plan for aws_security_group.my_webserver
+2020/11/28 22:04:10 [TRACE] eval: *terraform.EvalIf
+2020/11/28 22:04:10 [TRACE] eval: terraform.EvalNoop
+2020/11/28 22:04:10 [TRACE] eval: *terraform.EvalIf
+2020/11/28 22:04:10 [TRACE] eval: *terraform.EvalReadState
+2020/11/28 22:04:10 [TRACE] EvalReadState: reading state for aws_security_group.my_webserver
+2020/11/28 22:04:10 [TRACE] UpgradeResourceState: schema version of aws_security_group.my_webserver is still 1; calling provider "aws" for any other minor fixups
+2020/11/28 22:04:10 [TRACE] GRPCProvider: UpgradeResourceState
+2020/11/28 22:04:10 [ERROR] eval: *terraform.EvalReadState, err: rpc error: code = Canceled desc = context canceled
+2020/11/28 22:04:10 [ERROR] eval: *terraform.EvalSequence, err: rpc error: code = Canceled desc = context canceled
+2020/11/28 22:04:10 [TRACE] [walkApply] Exiting eval tree: aws_security_group.my_webserver
+2020/11/28 22:04:10 [TRACE] vertex "aws_security_group.my_webserver": visit complete
+2020/11/28 22:04:10 [TRACE] dag/walk: upstream of "aws_instance.my_webserver" errored, so skipping
+2020/11/28 22:04:10 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2020/11/28 22:04:10 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/hashicorp/aws\"] (close)" errored, so skipping
+2020/11/28 22:04:10 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2020/11/28 22:04:10 [TRACE] backend/local: graceful stop has completed
+2020/11/28 22:04:10 [WARN] terraform: stop complete
+2020/11/28 22:04:10 [TRACE] statemgr.Filesystem: creating backup snapshot at terraform.tfstate.backup
+2020/11/28 22:04:10 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 4
+2020/11/28 22:04:10 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2020/11/28 22:04:10 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/11/28 22:04:10 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2020-11-28T22:04:10.053Z [DEBUG] plugin: plugin exited

@@ -5,13 +5,11 @@
 #
 # 29.11.2020
 #----------------------------------------------------------
-
 provider "aws" {
   region                  = var.region #"us-east-1"
   shared_credentials_file = "~/.aws/credentials"
   profile                 = "la-sandbox" # "la-sandbox"
 }
-
 
 data "aws_ami" "latest_amazon_linux_2" {
   owners      = ["amazon"]
@@ -21,7 +19,6 @@ data "aws_ami" "latest_amazon_linux_2" {
     values = ["amzn2-ami-hvm-*-x86_64-gp2"] # always get the latest version
   }
 }
-
 
 resource "aws_instance" "my_webserver1" {
   ami = data.aws_ami.latest_amazon_linux_2.id
@@ -77,4 +74,3 @@ resource "aws_security_group" "my_webserver" {
     Owner = "Walter Sobchak"
   }
 }
-

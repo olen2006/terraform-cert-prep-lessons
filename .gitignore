@@ -12,3 +12,6 @@ terraform.tfvars
 
 # Private keys
 *.key
+
+#GCP keys
+*-creds.json

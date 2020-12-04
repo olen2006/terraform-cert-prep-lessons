@@ -18,9 +18,9 @@
 #----------------------------------------------------------
 
 provider "aws" {
-  region                  = "us-east-1" #"us-east-1"
+  region                  = "us-east-1" 
   shared_credentials_file = "~/.aws/credentials"
-  profile                 = "la-sandbox" # "la-sandbox"
+  profile                 = "la-sandbox" #
 }
 
 # Remote state storing on S3

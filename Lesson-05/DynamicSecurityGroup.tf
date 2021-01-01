@@ -11,19 +11,6 @@ provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
   profile                 = "la-sandbox"
 }
-/* 
-resource "aws_instance" "my_webserver" {
-  ami                    = "ami-04d29b6f966df1537" # Amazon Linux 2 in us-east-1
-  instance_type          = "t3.micro"
-  vpc_security_group_ids = [aws_security_group.my_webserver.id]
-  #key_name               = "Oregon"
-  user_data = templatefile("user_data.sh.tpl", { f_name = "Walter", l_name = "Sobchak", names = ["Vasya", "Kolya", "Petya"] }) #relative path
-  tags = {
-    Name  = "Lesson-5"
-    Owner = "Walter Sobchak"
-  }
-}
- */
 resource "aws_security_group" "my_webserver" {
   name        = "Dynamic-SG"
   description = "Dynamic Security Group"

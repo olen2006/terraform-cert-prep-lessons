@@ -2,7 +2,7 @@
 # My Teraform
 # Build Webserver during Bootstrap
 # 
-# LyfeCycle Resources and Zero Down Time 
+# LyfeCycle Resources and Zero Down Time!
 # opt 1 prevent_destroy = true
 # opt 2 ignore_changes = [ami, user_data]
 # opt 3 

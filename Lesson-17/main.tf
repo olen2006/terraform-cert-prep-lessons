@@ -2,7 +2,7 @@
 # My Terraform
 #
 # Terraform Conditions and Lookups
-#
+# instance_type = var.env == "prod" ? "t3.small" : "t2.micro"
 # 29.11.2020
 #----------------------------------------------------------
 provider "aws" {

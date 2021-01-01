@@ -2,7 +2,7 @@
 # My Teraform
 # Build Webserver during Bootstrap
 # 
-# Create server web, app, dSobchak 
+# Create servers: web, app, dSobchak 
 # Order of creation: db, app, web
 #
 # ----------------------------------------------------------------

@@ -1,6 +1,7 @@
 ######################################
 #
-# Working with Data Sources 
+# Working with Data Sources: aws_caller_identity
+# aws_caller_identity - Account id is needed for generating IAM policies!
 # https://www.terraform.io/docs/configuration/data-sources.html
 ######################################
 provider "aws" {

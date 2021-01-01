@@ -2,6 +2,8 @@
 # My Teraform
 # Build Webserver during Bootstrap
 # 28.11.2020
+#
+# instance  with user_data + Simple SG 
 # ----------------------------------------------------------------
 
 provider "aws" {

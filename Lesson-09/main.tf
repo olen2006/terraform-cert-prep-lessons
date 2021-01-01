@@ -1,3 +1,8 @@
+######################################
+#
+# Working with Data Sources 
+# https://www.terraform.io/docs/configuration/data-sources.html
+######################################
 provider "aws" {
   region                  = "us-east-1"
   shared_credentials_file = "~/.aws/credentials"

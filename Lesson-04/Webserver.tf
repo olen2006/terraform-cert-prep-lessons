@@ -2,7 +2,7 @@
 # My Teraform
 # Build Webserver during Bootstrap
 # 28.11.2020
-# templatefile function 
+# templatefile function, working with variable
 # ----------------------------------------------------------------
 
 provider "aws" {

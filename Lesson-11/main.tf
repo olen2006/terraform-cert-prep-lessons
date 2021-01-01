@@ -90,7 +90,7 @@ resource "aws_autoscaling_group" "web" {
   launch_configuration = aws_launch_configuration.weSobchakname
   min_size             = 2
   max_size             = 2
-  min_elb_capacity     = 2 # alb will do health check on both ti signal they are good.
+  min_elb_capacity     = 2 # alb will do health check on both to signal they are good.
   health_check_type    = "ELB"
   vpc_zone_identifier  = [aws_default_subnet.default_az1.id, aws_default_subnet.default_az2.id] ####
   load_balancers       = [aws_elSobchakweSobchakname]                                           ####

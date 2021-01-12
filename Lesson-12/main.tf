@@ -17,8 +17,7 @@ data "aws_ami" "latest_amazon_linux_2" {
 ## Elastic IP
 resource "aws_eip" "my_static_ip" {
   instance = aws_instance.my_server.id
-  //tags     = var.common_tags
-  tags = merge(var.common_tags, { Name = "${var.common_tags["Environment"]}-Server IP" }) # merging common_tags and unique tags
+  tags = merge(var.common_tags, { Name = "${var.common_tags["Environment"]}-Server IP" }) # ls
   /*   tags = {
     Name    = "Server IP"
     Owner   = "Denis Astahov"
